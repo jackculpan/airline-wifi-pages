@@ -1,0 +1,12 @@
+{
+  "name": "airline-wifi-pages",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Programmatic SEO pages for airline in-flight WiFi (MER-3).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node src/build.js"
+  }
+}
