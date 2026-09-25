@@ -10,7 +10,7 @@ const DIST = path.join(ROOT, "dist");
 
 const CFG = {
   brand: "Miles & Points Daily",
-  siteUrl: (process.env.SITE_URL || "https://airline-wifi.onrender.com").replace(/\/+$/, ""),
+  siteUrl: (process.env.SITE_URL || "https://airline-wifi.merchantai.workers.dev").replace(/\/+$/, ""),
   hubPath: "",
   get hubUrl() {
     return this.hubPath ? `${this.siteUrl}/${this.hubPath}` : this.siteUrl;

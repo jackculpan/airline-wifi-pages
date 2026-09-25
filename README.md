@@ -18,14 +18,13 @@ Render (own domain, own template, full SEO control).
 3. **Publish** by deploying the repo as a Render static site. Render runs the
    build and serves `dist/` over its CDN with pretty URLs (`/united-airlines`).
 
-## Deploy (Render static site)
+## Deploy (Cloudflare Workers static assets)
 
-- Build command: `node src/build.js`
-- Publish path: `dist`
-- Env var `SITE_URL` sets the canonical base URL (e.g. the onrender.com URL, or
-  a custom domain later). The build reads it and writes correct canonical,
-  Open Graph, sitemap, and internal-link URLs. No code change needed to move
-  domains — set `SITE_URL` and redeploy.
+- Build command: `node src/build.js`, deploy command: `npx wrangler deploy`
+- Serves `dist` at https://airline-wifi.merchantai.workers.dev
+- Env var `SITE_URL` sets the canonical base URL (defaults to the workers.dev URL).
+  The build writes canonical, Open Graph, sitemap, and internal-link URLs from it,
+  so moving to a custom domain is just setting `SITE_URL` and redeploying.
 
 ## Files (all < 500 lines)
 
